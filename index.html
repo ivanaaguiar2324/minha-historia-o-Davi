@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Nossa História 💙</title>
+<style>
+/* --- Estilo Geral --- */
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(120deg, #a0d8f1, #ccefff);
+    color: #4a6ea9; /* Cor do texto ajustada para azul médio */
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+    color: white; /* Título ainda em branco para destacar */
+    background: linear-gradient(120deg, #3399ff, #66ccff);
+}
+
+h1 {
+    font-size: 45px;
+    margin: 0;
+}
+
+nav {
+    text-align: center;
+    background: #3399ff;
+    padding: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: white; /* Links ainda brancos para contraste */
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+    line-height: 1.7;
+}
+
+/* --- Imagens Decoradas --- */
+img.decorada {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 25px;
+    display: block;
+    margin: 30px auto;
+    box-shadow:
+        0 0 0 8px #ffffff,
+        0 0 15px rgba(51,153,255,0.5),
+        0 0 25px rgba(102,204,255,0.3);
+    border: 3px solid #3399ff;
+    padding: 5px;
+    background: #e6f7ff;
+    transition: transform .3s;
+}
+
+img.decorada:hover {
+    transform: scale(1.05);
+}
+
+/* --- Cartinhas Clicáveis --- */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+    margin-top: 30px;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.hidden-message {
+    display: none;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #0066cc; /* Cor da mensagem das cartinhas permanece azul claro */
+    animation: fadeIn 1s forwards;
+    line-height: 1.5;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* --- Corações Flutuantes --- */
+.heart {
+    position: absolute;
+    color: #3399ff;
+    font-size: 25px;
+    animation: float 2s linear forwards;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0% { opacity: 1; transform: translateY(0) scale(1); }
+    100% { opacity: 0; transform: translateY(-120px) scale(1.8); }
+}
+
+/* --- Seções --- */
+section {
+    padding: 60px 20px;
+    border-bottom: 2px dashed #99ccff;
+}
+
+section h2 {
+    color: #4a6ea9; /* Cor dos títulos das seções ajustada para azul médio */
+    text-align: center;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #4a6ea9; /* Cor do texto do footer ajustada para azul médio */
+    background: #ccefff;
+}
+
+/* --- Botão voltar ao topo --- */
+#topBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #3399ff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+#topBtn:hover {
+    background: #0073e6;
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="#inicio">Início</a>
+    <a href="#infancia">Infância</a>
+    <a href="#conhecemos">Quando nos Conhecemos</a>
+    <a href="#ferias">Férias</a>
+    <a href="#pai">Dia que veio conhecer minha família</a>
+    <a href="#namoro">Namoro</a>
+    <a href="#futuro">Futuro</a>
+</nav>
+
+<section id="inicio">
+<header>
+    <h1>Nossa História💙</h1>
+    <p>Dois caminhos que se encontraram no dia 15/04/2025</p>
+</header>
+<div class="container">
+    <img src="ivana1.jpeg" class="decorada" alt="Nós dois">
+    <div class="card" onclick="revealMessage('msg1')">
+        <h2>💌 Clique aqui essa mensagem</h2>
+        <div class="hidden-message" id="msg1">
+            Meu neném, cada dia que passa eu me apaixono mais ainda por você. Eu te amo meu amor!! 
+        </div>
+    </div>
+</div>
+</section>
+
+<section id="infancia">
+<h2>Nós pequenos</h2>
+<div class="container">
+    <p>Dois pequenos corações crescendo em mundos diferentes…</p>
+    <img src="ivana4.jpeg" class="decorada" alt="Você criança">
+    <img src="ivana5.jpeg" class="decorada" alt="Ele criança">
+</div>
+</section>
+
+<section id="conhecemos">
+<h2>Quando nos Conhecemos</h2>
+<div class="container">
+    <p>Dia 15/04/2025, foi um dia tão especial.  
+       Daquele dia em diante todas as palavras de amor pra mim passaram a soar um só nome: Davi.</p>
+    <img src="ivana6.jpeg" class="decorada">
+    <div class="card" onclick="revealMessage('msg2')">
+        <h2>💌 Nossa primeira foto juntos</h2>
+        <div class="hidden-message" id="msg2">
+            Lembro desse dia direto, como meu coração estava acelerado por estar perto de você. 💙
+        </div>
+    </div>
+</div>
+</section>
+
+<section id="ferias">
+<h2>Dia das férias que estavamos juntos</h2>
+<div class="container">
+    <p>Momentos incríveis que passamos juntos nas férias…</p>
+    <img src="ivana7.jpeg" class="decorada" alt="Férias">
+    <div class="card" onclick="revealMessage('msg4')">
+        <h2>💌 Lembranças de férias</h2>
+        <div class="hidden-message" id="msg4">
+            Dos dias que estivemos juntos, esse é o único que tenho foto.
+            Porque os outros foram tão mágicos que até esqueci que existia telefone.
+        </div>
+    </div>
+</div>
+</section>
+
+<section id="pai">
+<h2>Dia que você veio conhecer minha família</h2>
+<div class="container">
+    <p>Um momento importante e emocionante para todos nós…</p>
+    <img src="ivana8.jpeg" class="decorada" alt="Dia que veio conhecer minha família">
+    <div class="card" onclick="revealMessage('msg5')">
+        <h2>Lembrança desse dia</h2>
+        <div class="hidden-message" id="msg5">
+            Nunca vou esquecer como fiquei ansiosa com esse momento.
+            Foi um momento muito feliz e emocionante de ver você ser tão corajoso e sincero. 
+        </div>
+    </div>
+</div>
+</section>
+
+<section id="namoro">
+<h2>Nosso Namoro</h2>
+<div class="container">
+    <p>Começou em 30/09/2025, e cada momento é mágico.</p>
+    <img src="ivana2.jpeg" class="decorada">
+    <div class="card" onclick="revealMessage('msg3')">
+        <h2>💌 Cartinha especial</h2>
+        <div class="hidden-message" id="msg3">
+            Eu prometo de dedinho estar com você e cuidar de você para sempre. Eu Te amo meu neném! 💙
+        </div>
+    </div>
+</div>
+</section>
+
+<section id="futuro">
+<h2>Nosso Futuro</h2>
+<div class="container">
+    <p>Planos, sonhos e tudo que ainda vamos viver juntos…</p>
+    <img src="ivana9.jpeg" class="decorada">
+    <img src="ivana10.jpeg" class="decorada">
+</div>
+</section>
+
+<footer>
+    Feito com amor para você 💙
+</footer>
+
+<button onclick="topFunction()" id="topBtn" title="Topo">⬆</button>
+
+<script>
+// Função para mostrar as mensagens e soltar os corações
+function revealMessage(id) {
+    document.getElementById(id).style.display = "block";
+    let heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "💙";
+    heart.style.left = event.clientX + "px";
+    heart.style.top = event.clientY + "px";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 2000);
+}
+
+// Coração flutuante em qualquer clique na página
+document.addEventListener("click", function(e) {
+    let heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "💙";
+    heart.style.left = e.clientX + "px";
+    heart.style.top = e.clientY + "px";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 2000);
+});
+
+// Função para voltar ao topo da página
+function topFunction() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
+</script>
+
+</body>
+</html>
